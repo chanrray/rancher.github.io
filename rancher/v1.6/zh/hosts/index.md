@@ -26,23 +26,37 @@ lang: zh
 
 ### Docker版本适用对比
 
-版本               | Rancher适用？ | K8S适用？ | 安装脚本 |
-----------------------|------------|---------------------|-----------------
-`1.9.x` 和更低的版本   | No         |                     |
-`1.10.0` - `1.10.2`   | No         |                     |
-`1.10.3` (和更高的版本) | No{::nomarkdown}<p>(Yes v1.6.5以及更低版本中)</p>{:/} | No            | `curl https://releases.rancher.com/install-docker/1.10.sh | sh`
-`1.11.x`              | No         |                     | `curl https://releases.rancher.com/install-docker/1.11.sh | sh`
+版本               | Rancher 适用? | K8s 适用? | Windows 适用? | 安装脚本 |
+----------------------|------------|---------------------|---------------------|-----------------
+`1.9.x` and lower     | No         |                     |                     |
+`1.10.0` - `1.10.2`   | No         |                     |                     |
+`1.10.3` (and higher) | No{::nomarkdown}<p>(Yes in v1.6.5 and lower)</p>{:/}         | No                  | No                    | `curl https://releases.rancher.com/install-docker/1.10.sh | sh`
+`1.11.x`              | No         |                     |                     | `curl https://releases.rancher.com/install-docker/1.11.sh | sh`
 `1.12.0` - `1.12.2`   | No         |                     |
-`1.12.3` (和更高的版本) | **Yes**    | **Yes**             | `curl https://releases.rancher.com/install-docker/1.12.sh | sh`
-`1.13.x`              | **Yes**    | No                  | `curl https://releases.rancher.com/install-docker/1.13.sh | sh`
-`17.03.x-ce`          | **Yes**    | No                  | `curl https://releases.rancher.com/install-docker/17.03.sh | sh`
-`17.03.x-ee`          | **Yes**    | No                  | n/a
-`17.04.x-ce`          | No         |                     | `curl https://releases.rancher.com/install-docker/17.04.sh | sh`
-`17.05.x-ce`          | No         | No                  | `curl https://releases.rancher.com/install-docker/17.05.sh | sh`
-`17.06.x-ce`          | **Yes**{::nomarkdown}<p>(v1.6.3以及更高版本)</p>{:/}    | No                  | `curl https://releases.rancher.com/install-docker/17.06.sh | sh`
-`17.06.x-ee`          | **Yes**{::nomarkdown}<p>(v1.6.3以及更高版本)</p>{:/}    | No                  | n/a
+`1.12.3` (and higher) | **Yes**    | **Yes**             | No                    | `curl https://releases.rancher.com/install-docker/1.12.sh | sh`
+`1.13.x`              | **Yes**    | **Yes**{::nomarkdown}<p>(Kubernetes version 1.8, 1.9, 1.10, 1.11)</p>{:/}                   | No                    | `curl https://releases.rancher.com/install-docker/1.13.sh | sh`
+`17.03.x-ce`          | **Yes**    | **Yes**{::nomarkdown}<p>(Kubernetes version 1.8, 1.9, 1.10, 1.11)</p>{:/}                  | No                    | `curl https://releases.rancher.com/install-docker/17.03.sh | sh`
+`17.03.x-ee`          | **Yes**    | **Yes**{::nomarkdown}<p>(Kubernetes version 1.8, 1.9, 1.10, 1.11)</p>{:/}                  | No                    | n/a
+`17.04.x-ce`          | No         | No                    | No                    | `curl https://releases.rancher.com/install-docker/17.04.sh | sh`
+`17.05.x-ce`          | No         | No                  | No                    | `curl https://releases.rancher.com/install-docker/17.05.sh | sh`
+`17.06.x-ce`          | **Yes**{::nomarkdown}<p>(v1.6.3 and higher)</p>{:/}    | No                  | No                    | `curl https://releases.rancher.com/install-docker/17.06.sh | sh`
+`17.06.x-ee`          | **Yes**{::nomarkdown}<p>(v1.6.3 and higher)</p>{:/}    | No                  | **Yes**{::nomarkdown}<p>(v1.6.13 and higher)</p>{:/}   | n/a
+`17.09.x-ce`          | **Yes**{::nomarkdown}<p>(v1.6.11 and higher)</p>{:/}   | No                  | No                    | `curl https://releases.rancher.com/install-docker/17.09.sh | sh`
+`17.09.x-ee`          | **Yes**{::nomarkdown}<p>(v1.6.11 and higher)</p>{:/}   | No                  | No                    | n/a
+`17.10.x-ce`          | No         | No                    |                     | `curl https://releases.rancher.com/install-docker/17.10.sh | sh`
+`17.11.x-ce`          | No         | No                    |                     | n/a
+`17.12.x-ce`          | **Yes**{::nomarkdown}<p>(v1.6.14 and higher)</p>{:/}   | No                  | No                    | `curl https://releases.rancher.com/install-docker/17.12.sh | sh`
+`17.12.x-ee`          | **Yes**{::nomarkdown}<p>(v1.6.14 and higher)</p>{:/}   | No                  | No                    | n/a
+`18.01.x-ce`          | No         | No                    |                     | n/a
+`18.02.x-ce`          | No         | No                    |                     | n/a
+`18.03.x-ce`          | **Yes**{::nomarkdown}<p>(v1.6.17 and higher)</p>{:/}   | No                  | No                    | `curl https://releases.rancher.com/install-docker/18.03.sh | sh`
+`18.03.x-ee`          | **Yes**{::nomarkdown}<p>(v1.6.17 and higher)</p>{:/}   | No                  | No                    | n/a
+`18.06.x-ce`          | **Yes**{::nomarkdown}<p>(v1.6.20 and higher)</p>{:/}   | **Yes**{::nomarkdown}<p>(Kubernetes version 1.12)</p>{:/}                  | No                    | `curl https://releases.rancher.com/install-docker/18.06.sh | sh`
+`18.06.x-ee`          | **Yes**{::nomarkdown}<p>(v1.6.20 and higher)</p>{:/}   | **Yes**{::nomarkdown}<p>(Kubernetes version 1.12)</p>{:/}                  | No                    | n/a
+`18.09.x-ce`          | **Yes**{::nomarkdown}<p>(v1.6.26 and higher)</p>{:/}   | **Yes**{::nomarkdown}<p>(Kubernetes version 1.12)</p>{:/}                  | No                    | `curl https://releases.rancher.com/install-docker/18.09.sh | sh`
+`18.09.x-ee`          | **Yes**{::nomarkdown}<p>(v1.6.26 and higher)</p>{:/}   | **Yes**{::nomarkdown}<p>(Kubernetes version 1.12)</p>{:/}                  | No                    | n/a
 
-> **注意：** 我们不会支持Docker的edge版本，但是我们会支持Docker的稳定版本。
+> **注意：** 我们不会支持Docker的test/nightly/edge版本，但是我们会支持Docker的稳定版本。
 
 ### 安装特定版本的Docker
 
